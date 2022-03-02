@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-$ go install https://github.com/multiprocessio/fakegen
+$ go install github.com/multiprocessio/fakegen@latest
 ```
 
 ## Usage
@@ -13,4 +13,7 @@ you a JSON array of objects with that many rows and unique columns.
 
 ```
 $ fakegen --rows 10 --cols 1000
+[
+  ... 10 fake objects with 1000 fake columns ...
+]
 ```
