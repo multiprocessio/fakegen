@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"math/rand"
 	"os"
@@ -12,6 +11,15 @@ import (
 
 	"github.com/jaswdr/faker"
 )
+
+// faker.Lorem().Word() only seems to have like 180 unique entries.
+// So we brought in our own dictionary so that the words are unique
+// but not just completely random collections of letters which are not
+// realistic in the real world and destroy sorting algorithms
+// unfairly.
+func randomWord() string {
+	return WORDS[rand.Intn(len(WORDS))]
+}
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
@@ -64,9 +72,26 @@ func main() {
 		func() interface{} {
 			return faker.UInt16()
 		},
+		func() interface{} {
+			return randomWord()
+		},
 	}
-	for i := 0; i < cols; i += 1 {
-		schema[fmt.Sprintf("col%d", i)] = types[rand.Intn(len(types))]
+
+	failures := 0
+	for len(schema) < cols {
+		// TODO: handle when more than 370k columns
+		// requested. Should probably try to combine words
+		// instead of reusing them or failing here.
+		column := randomWord()
+		_, exists := schema[column]
+		if exists {
+			failures += 1
+			if failures > len(WORDS) / 10 {
+				log.Fatal("Running out of unique entries.")
+			}
+			continue
+		}
+		schema[column] = types[rand.Intn(len(types))]
 	}
 
 	_, err := os.Stdout.Write([]byte("["))
