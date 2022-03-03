@@ -23,7 +23,7 @@ func randomWord() string {
 
 var (
 	yearsAhead50 = time.Now().Add(time.Hour * 8760 * 50)
-	yearsAgo50 = time.Now().Add(-1 * time.Hour * 8760 * 50)
+	yearsAgo50   = time.Now().Add(-1 * time.Hour * 8760 * 50)
 )
 
 func main() {
@@ -100,7 +100,7 @@ func main() {
 		_, exists := schema[column]
 		if exists {
 			failures += 1
-			if failures > len(WORDS) / 10 {
+			if failures > len(WORDS)/10 {
 				log.Fatal("Running out of unique entries.")
 			}
 			continue
