@@ -18,21 +18,21 @@ Pass the number of rows and columns you want and `fakegen` will give
 you a JSON array of objects with that many rows and unique columns.
 
 ```
-$ fakegen --rows 2 --cols 5
+$ fakegen --rows 2 --cols 5 | jq .
 [
   {
-    "DLL": "odio ipsum soluta qui minus id sit dolores et voluptate excepturi voluptatibus accusamus minus fugiat nobis voluptas est temporibus pariatur saepe labore ullam voluptatem error doloremque ut dignissimos voluptas doloribus voluptatum quos error commodi expedita accusamus aliquam et.",
-    "dupondii": "quia sunt",
-    "hilltops": 56240,
-    "hygienes": "pierogi",
-    "octahedra": "sunt ipsam explicabo quia reprehenderit reprehenderit neque ut nemo vero et veritatis delectus velit consequatur facilis delectus omnis consectetur qui officiis quo molestiae mollitia et et et sit id repudiandae ea laboriosam nihil blanditiis deleniti est sint reiciendis mollitia."
+    "enecate": 1322845113,
+    "irruptions": "et tempore suscipit dignissimos odit ut accusantium dolores cumque est dignissimos ut dolorem saepe quia laborum doloribus quisquam sapiente illo omnis dolor consequatur incidunt quisquam vero tempore quae eos doloribus temporibus et eligendi aspernatur molestias sed pariatur qui officiis voluptate quis tempore laboriosam fugit in recusandae explicabo nemo ut neque est quia aliquam ex animi reprehenderit sint neque eaque quibusdam eius ducimus consequatur nostrum ut facilis id quam non rerum architecto. dolor reiciendis autem reprehenderit nostrum assumenda tempore et ex est vero error sequi ut magni quis molestias nemo voluptatum omnis nesciunt.",
+    "phototelescopic": "facere non iusto a pariatur vero qui magnam nostrum quibusdam magnam a omnis adipisci molestias dolores commodi at consequatur architecto doloribus tempora qui inventore quia officiis illo nemo et eos doloremque maxime omnis fuga qui quibusdam. et sit molestiae iste dolor totam facere debitis quae ullam nam sed amet at ipsam culpa repellendus expedita sit maiores quaerat odio exercitationem qui et itaque voluptas dolores nesciunt quia mollitia nesciunt laudantium fuga in nulla doloribus omnis et odio necessitatibus soluta asperiores est velit nobis nihil nulla ea et necessitatibus aut eius pariatur enim inventore qui nobis corrupti nam non ullam et esse exercitationem totam qui.",
+    "restrictively": false,
+    "upwafted": "2020-10-09T21:03:23.109945329Z"
   },
   {
-    "DLL": "deleniti minima officiis dolorem quia fuga iure non quis corporis et itaque sunt sunt veritatis ut molestiae non ad asperiores in eligendi error neque dolores asperiores in optio voluptates nisi eum repellat cumque animi dolorem illum esse quas ullam voluptas sapiente culpa maiores recusandae reprehenderit quam iusto aspernatur ex eum id vel quo modi delectus aperiam ea ut repellendus corporis assumenda aspernatur error minus. hic eos sunt quia aut explicabo nulla est non veritatis amet et deleniti quia id et blanditiis eligendi non culpa omnis ea dolor tenetur et consequuntur adipisci qui qui quaerat delectus sit et ullam quod omnis id nihil vitae placeat consequatur a incidunt placeat tempora fugit tempora nostrum incidunt qui fugiat eaque ea et enim aut beatae vitae in aspernatur sit. aperiam est soluta non placeat soluta vero molestias quidem quidem dolor.",
-    "dupondii": "rerum sit perspiciatis eligendi",
-    "hilltops": 49408,
-    "hygienes": "overniceness",
-    "octahedra": "non itaque optio qui quas dolore omnis voluptatum libero dolorem et beatae saepe alias quasi in consequuntur consectetur qui aspernatur facere sed autem sed eum aut sit voluptatem rerum ea enim dolorem id est qui beatae animi est ut nemo tenetur magni maxime alias et totam ipsum voluptatem at aliquid est amet recusandae sit consequuntur dolorem doloribus voluptatem eaque aut ut."
+    "enecate": 1771337749,
+    "irruptions": "voluptas quis commodi qui commodi soluta ut debitis ipsam reprehenderit odio quaerat animi temporibus praesentium repellendus quae sapiente alias id assumenda dolorum rem aut numquam repellendus sed asperiores nulla ut accusamus consectetur incidunt a accusamus qui blanditiis ut maxime velit et inventore vel aliquid sit autem ex quo quae rerum aspernatur ullam ut aut sed dolor eos ut dolorem id quia aperiam libero magnam perferendis cupiditate qui ex corrupti numquam dicta id laboriosam corporis illum asperiores enim soluta animi debitis deleniti totam corporis corporis dolores a qui.",
+    "phototelescopic": "non suscipit illo omnis explicabo omnis omnis quia eligendi quidem suscipit tenetur odit dicta incidunt asperiores nisi vel sit porro voluptatem commodi error autem exercitationem dicta quas totam necessitatibus neque et et et quia consectetur facere suscipit repellat dolor aliquam culpa harum aspernatur dolorem nihil dolorem dolorum ex in culpa molestiae nihil odio et doloremque repellendus blanditiis et quae et similique nam culpa ratione fugit et dolorum dolorum unde qui qui veniam occaecati sit nemo asperiores ipsa excepturi soluta odit dolores excepturi occaecati sit. aut harum vel vitae dicta quam quibusdam magni quam qui architecto odit excepturi officiis eum rerum aliquam est molestias similique assumenda sunt autem velit molestiae tempora dolor et esse quisquam consequuntur ducimus deserunt consequatur earum doloribus ratione eius repellendus quidem omnis quaerat deserunt officia qui possimus officia dicta sit qui neque sunt blanditiis illo veritatis consequatur eaque praesentium quibusdam ratione rem dolores magni odio quisquam tempora. consequatur laudantium itaque omnis temporibus mollitia dolores quisquam ab vero inventore et dolorem ea ut quia laudantium neque odit veniam voluptatem vero et delectus rerum quaerat architecto ab vitae tempore error omnis dolor et doloremque dolor.",
+    "restrictively": true,
+    "upwafted": "1979-01-09T05:20:25.7650053Z"
   }
 ]
 ```

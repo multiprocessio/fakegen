@@ -21,6 +21,11 @@ func randomWord() string {
 	return WORDS[rand.Intn(len(WORDS))]
 }
 
+var (
+	yearsAhead50 = time.Now().Add(time.Hour * 8760 * 50)
+	yearsAgo50 = time.Now().Add(-1 * time.Hour * 8760 * 50)
+)
+
 func main() {
 	rand.Seed(time.Now().UnixNano())
 	faker := faker.New()
@@ -65,6 +70,15 @@ func main() {
 		},
 		func() interface{} {
 			return faker.Int32()
+		},
+		func() interface{} {
+			return faker.Float32(6, -100000, 100000)
+		},
+		func() interface{} {
+			return faker.Bool()
+		},
+		func() interface{} {
+			return faker.Time().TimeBetween(yearsAgo50, yearsAhead50)
 		},
 		func() interface{} {
 			return strings.Join(faker.Lorem().Words(rand.Intn(10)+1), " ")
