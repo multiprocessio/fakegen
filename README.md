@@ -15,20 +15,20 @@ Binaries for amd64 (x86_64) are provided for each release.
 On macOS, Linux, and WSL you can run the following:
 
 ```bash
-$ curl -LO "https://github.com/multiprocessio/dsq/releases/download/0.5.0/dsq-$(uname -s | awk '{ print tolower($0) }')-x64-0.5.0.zip"
-$ unzip dsq-*-0.5.0.zip
-$ sudo mv dsq /usr/local/bin/dsq
+$ curl -LO "https://github.com/multiprocessio/fakegen/releases/download/0.1.0/fakegen-$(uname -s | awk '{ print tolower($0) }')-x64-0.1.0.zip"
+$ unzip fakegen-*-0.1.0.zip
+$ sudo mv fakegen /usr/local/bin/fakegen
 ```
 
 Or install manually from the [releases
-page](https://github.com/multiprocessio/dsq/releases), unzip and add
-`dsq` to your `$PATH`.
+page](https://github.com/multiprocessio/fakegen/releases), unzip and add
+`fakegen` to your `$PATH`.
 
 ### Windows, not WSL
 
 Download the [latest Windows
-release](https://github.com/multiprocessio/dsq/releases), unzip it,
-and add `dsq` to your `$PATH`.
+release](https://github.com/multiprocessio/fakegen/releases), unzip it,
+and add `fakegen` to your `$PATH`.
 
 ### Manual, and other Go platforms
 
@@ -36,10 +36,10 @@ If you are on another platform or architecture or want to grab the
 latest release, you can do so with Go 1.17+:
 
 ```
-$ go install github.com/multiprocessio/dsq@latest
+$ go install github.com/multiprocessio/fakegen@latest
 ```
 
-`dsq` will likely work on other platforms that Go is ported to such as
+`fakegen` will likely work on other platforms that Go is ported to such as
 AARCH64 and OpenBSD, but tests and builds are only run against x86_64
 Windows/Linux/macOS.
 
