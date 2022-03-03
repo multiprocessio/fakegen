@@ -6,11 +6,42 @@ rows will be consistent. For example, if a value is an int in one
 row's column, it will be an int in the same column across all other
 row's.
 
-## Installation
+## Install
+
+Binaries for amd64 (x86_64) are provided for each release.
+
+### macOS, Linux, WSL
+
+On macOS, Linux, and WSL you can run the following:
 
 ```bash
-$ go install github.com/multiprocessio/fakegen@latest
+$ curl -LO "https://github.com/multiprocessio/dsq/releases/download/0.5.0/dsq-$(uname -s | awk '{ print tolower($0) }')-x64-0.5.0.zip"
+$ unzip dsq-*-0.5.0.zip
+$ sudo mv dsq /usr/local/bin/dsq
 ```
+
+Or install manually from the [releases
+page](https://github.com/multiprocessio/dsq/releases), unzip and add
+`dsq` to your `$PATH`.
+
+### Windows, not WSL
+
+Download the [latest Windows
+release](https://github.com/multiprocessio/dsq/releases), unzip it,
+and add `dsq` to your `$PATH`.
+
+### Manual, and other Go platforms
+
+If you are on another platform or architecture or want to grab the
+latest release, you can do so with Go 1.17+:
+
+```
+$ go install github.com/multiprocessio/dsq@latest
+```
+
+`dsq` will likely work on other platforms that Go is ported to such as
+AARCH64 and OpenBSD, but tests and builds are only run against x86_64
+Windows/Linux/macOS.
 
 ## Usage
 
