@@ -384,12 +384,6 @@ func formatOrFromFileExtension(format, out string, formatDefault bool) string {
 	if ext[0] == '.' {
 		ext = ext[1:]
 	}
-
-	switch ext {
-	case "xlsx":
-		return "excel"
-	}
-
 	return ext
 }
 
@@ -415,7 +409,7 @@ Supported formats:
   json		Array of JSON objects
   jsonl		Newline separated JSON objects
   cjson		Concatenated JSON objects
-  excel
+  xlsx
   csv
   tsv
 
@@ -524,7 +518,7 @@ func _main() error {
 		return parquetEncode(w, schema, generator)
 	case "orc":
 		return orcEncode(w, generator)
-	case "excel":
+	case "xlsx":
 		w.Close()
 		return excelEncode(out, generator)
 	case "ods":

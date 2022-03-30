@@ -67,3 +67,38 @@ $ fakegen --rows 2 --cols 5 | jq .
   }
 ]
 ```
+
+### Formats
+
+You can change the output format by passing the `-f` or `--format` flag.
+
+```
+$ fakegen -r 10 -c 2 -f csv
+seavy,spangle-baby
+2070-08-27T17:07:35Z,-28123.3
+2063-10-30T15:06:37Z,-82834.6
+2066-04-29T00:10:38Z,-74438.5
+2006-08-31T11:45:50Z,-85888.4
+1981-11-20T20:49:30Z,-78208.3
+2065-07-02T12:31:05Z,13387.5
+2003-12-29T22:37:19Z,-62472.3
+1981-08-29T14:41:20Z,-55740.1
+2062-07-09T08:56:47Z,54202.2
+2010-05-30T08:28:33Z,-73394.6
+```
+
+#### Support
+
+
+| Format | Description |
+|--------|--------------|
+| `json`   | Array of JSON objects             |
+| `jsonl` | JSON objects separated by newlines |
+| `csv` | |
+| `tsv` | |
+| `xlsx` | |
+
+
+### Output file
+
+Some formats like
