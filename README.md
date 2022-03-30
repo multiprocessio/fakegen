@@ -87,8 +87,7 @@ seavy,spangle-baby
 2010-05-30T08:28:33Z,-73394.6
 ```
 
-#### Support
-
+Here are the supported format strings:
 
 | Format | Description |
 |--------|--------------|
@@ -96,9 +95,69 @@ seavy,spangle-baby
 | `jsonl` | JSON objects separated by newlines |
 | `csv` | |
 | `tsv` | |
-| `xlsx` | |
+| `xlsx` | Excel file with one sheet, "Sheet1". |
 
+In the future other formats like OpenOffice ODS, Parquet, Apache ORC,
+etc. would be great to have.
 
 ### Output file
 
-Some formats like
+You can specify a file to write to with the `-o` or `--out` flag. Some
+formats like `xlsx` require this flag.
+
+If you specify this with a wellknown extension you can omit the format
+flag.
+
+```
+$ fakegen -r 10 -c 2 -o data.csv
+$ cat data.csv
+courtyard,pagods
+2008-01-06T18:00:42Z,false
+2015-04-08T21:26:41Z,true
+2055-04-21T08:48:07Z,false
+2023-02-17T06:37:25Z,false
+<nil>,true
+2008-05-18T06:57:03Z,false
+1987-11-18T21:15:48Z,true
+2014-04-12T08:38:32Z,false
+2012-11-06T01:40:37Z,false
+1992-11-26T03:51:10Z,false
+```
+
+### Null frequency
+
+By default nulls will show up in 10% of generated cells. You can
+modify this by setting the `-n` or `--null-frequency` flag with a
+decimal value.
+
+To disable nulls, set the flag to `0`.
+
+```
+$ fakegen -r 10 -c 2 -n 0
+[{"unctious":"1977-10-31T22:05:05.68606544Z","misagent":"2019-02-05T08:10:49.013647805Z"},
+{"unctious":"2052-11-28T15:10:40.998426932Z","misagent":"1995-10-05T14:02:26.732748512Z"},
+{"unctious":"1982-10-14T04:41:34.326758028Z","misagent":"2070-03-20T05:50:11.749294271Z"},
+{"unctious":"1984-06-04T00:09:05.594979649Z","misagent":"2047-08-31T23:08:52.655138927Z"},
+{"unctious":"1979-01-10T05:38:35.725041374Z","misagent":"2043-06-14T19:22:48.02132443Z"},
+{"unctious":"2012-03-05T06:43:01.640412792Z","misagent":"2031-10-02T20:41:54.617712604Z"},
+{"unctious":"2029-02-23T05:48:40.869202594Z","misagent":"1992-08-18T18:07:09.712263831Z"},
+{"misagent":"2064-12-09T01:31:53.965240833Z","unctious":"1999-10-18T04:57:53.869159811Z"},
+{"unctious":"1992-08-18T00:58:12.024110889Z","misagent":"2024-09-07T05:58:36.481215844Z"},
+{"unctious":"2064-04-05T16:46:31.701345883Z","misagent":"2066-09-11T14:15:54.357142854Z"}]
+```
+
+To get nulls 50% of the time, set the flag to `.5`.
+
+```
+$ fakegen -r 10 -c 2 -n .5
+[{"retraded":-58640.1,"high-compression":null},
+{"high-compression":1519695743,"retraded":null},
+{"high-compression":-1466727411,"retraded":-59521.6},
+{"high-compression":null,"retraded":-6683.1},
+{"high-compression":null,"retraded":null},
+{"high-compression":null,"retraded":null},
+{"high-compression":null,"retraded":null},
+{"high-compression":721870540,"retraded":-18646.4},
+{"high-compression":-922344240,"retraded":19933.6},
+{"high-compression":-1471776625,"retraded":null}]
+```
