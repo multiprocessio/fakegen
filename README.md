@@ -18,8 +18,8 @@ Binaries for amd64 (x86_64) are provided for each release.
 On macOS, Linux, and WSL you can run the following:
 
 ```bash
-$ curl -LO "https://github.com/multiprocessio/fakegen/releases/download/0.1.0/fakegen-$(uname -s | awk '{ print tolower($0) }')-x64-0.1.0.zip"
-$ unzip fakegen-*-0.1.0.zip
+$ curl -LO "https://github.com/multiprocessio/fakegen/releases/download/0.2.0/fakegen-$(uname -s | awk '{ print tolower($0) }')-x64-0.2.0.zip"
+$ unzip fakegen-*-0.2.0.zip
 $ sudo mv fakegen /usr/local/bin/fakegen
 ```
 
