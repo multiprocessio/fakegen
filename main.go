@@ -2,15 +2,15 @@ package main
 
 import (
 	"encoding/csv"
-	"math"
 	"errors"
-	"runtime"
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"math/rand"
 	"os"
 	"path/filepath"
+	"runtime"
 	"sort"
 	"strconv"
 	"strings"
@@ -18,8 +18,8 @@ import (
 
 	goccy_json "github.com/goccy/go-json"
 	"github.com/jaswdr/faker"
-	"github.com/xitongsys/parquet-go/writer"
 	jsonutil "github.com/multiprocessio/go-json"
+	"github.com/xitongsys/parquet-go/writer"
 	"github.com/xuri/excelize/v2"
 )
 
@@ -210,11 +210,11 @@ func parquetEncode(out io.Writer, schema map[string]columnKind, generator chan m
 
 		kind := schema[col]
 		parquetInfo := map[columnKind]string{
-			boolColumn: "type=BOOLEAN",
+			boolColumn:   "type=BOOLEAN",
 			stringColumn: "type=BYTE_ARRAY, convertedtype=UTF8",
-			intColumn: "type=INT64",
-			floatColumn: "type=FLOAT",
-			timeColumn: "type=INT64, convertedtype=TIMESTAMP_MILLIS",
+			intColumn:    "type=INT64",
+			floatColumn:  "type=FLOAT",
+			timeColumn:   "type=INT64, convertedtype=TIMESTAMP_MILLIS",
 		}[kind]
 		col = strings.ReplaceAll(col, "-", "")
 		parquetSchema += fmt.Sprintf(`{"Tag": "name=%s, %s"}`, col, parquetInfo)
@@ -246,6 +246,7 @@ func odsEncode(out io.Writer, generator chan map[string]any) error {
 }
 
 type columnKind = uint
+
 const (
 	boolColumn columnKind = iota
 	stringColumn
@@ -256,10 +257,11 @@ const (
 
 type columnSchema struct {
 	generator func() any
-	kind columnKind
+	kind      columnKind
 }
 
-var nullFrequency = .005
+var nullFrequency = .01
+
 func timeForNull() bool {
 	// Don't trust float equality
 	if nullFrequency < .00001 {
@@ -268,7 +270,7 @@ func timeForNull() bool {
 
 	times := 1 / nullFrequency * 1000
 	r := rand.Intn(int(math.Ceil(times)))
-	n := times - times * nullFrequency
+	n := times - times*nullFrequency
 	return float64(r) > n
 }
 
