@@ -1,4 +1,4 @@
-# fakegen: Single binary CLI for generating a random schema of M columns to populate N rows of data
+# fakegen: Single binary CLI for generating a random schema of M columns to populate N rows of JSON, CSV, Excel, etc.
 
 This program generates a random schema of M columns and then generates
 N rows of that schema. So all value types within a column across all
