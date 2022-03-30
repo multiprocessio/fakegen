@@ -6,6 +6,9 @@ rows will be consistent. For example, if a value is an int in one
 row's column, it will be an int in the same column across all other
 row's.
 
+It generates JSON by default but can generate other formats like CSV,
+TSV, Excel, etc.
+
 ## Install
 
 Binaries for amd64 (x86_64) are provided for each release.
