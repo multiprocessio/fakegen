@@ -391,9 +391,9 @@ var Version = "latest"
 
 var HELP = `fakegen (Version ` + Version + `) - Single binary CLI for generating a random schema of M columns to populate N rows of data
 
-Usage: fakegen --rows N --columns M > testdata.json
-       fakegen --rows N --columns M --out testdata.json
-       fakegen --rows N --columns M --format csv > testdata.csv
+Usage: fakegen --rows N --cols M > testdata.json
+       fakegen --rows N --cols M --out testdata.json
+       fakegen --rows N --cols M --format csv > testdata.csv
 
 Flags:
 
@@ -402,7 +402,7 @@ Flags:
   -o, --out		Specify file to write to. If empty, writes to stdout
   -f, --format		Specify output format. Inferred by --out flag if present and --format flag empty
   -r, --rows		Number of rows to generate
-  -c, --columns 	Number of columns to generate
+  -c, --cols		Number of columns to generate
 
 Supported formats:
 
